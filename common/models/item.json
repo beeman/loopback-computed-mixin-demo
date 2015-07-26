@@ -1,0 +1,40 @@
+{
+  "name": "Item",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Computed": {
+      "properties": {
+        "readonly": "computedReadonly",
+        "requestedAt": "computedRequestedAt",
+        "random": "computedRandom"
+      }
+    }
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "string",
+      "required": true
+    },
+    "readonly": {
+      "type": "boolean"
+    },
+    "requestedAt": {
+      "type": "date"
+    },
+    "random": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
